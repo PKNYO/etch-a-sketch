@@ -1,4 +1,5 @@
-const container = document.querySelector(".container")
+const gridContainer = document.querySelector(".grid-container")
+const buttonsContainer = document.querySelector(".button-container")
 const changeButton = document.querySelector(".change-button")
 const resetButton = document.querySelector(".reset-button")
 
@@ -9,7 +10,7 @@ function createGrid(size) {
         const row = document.createElement("div")
     
         row.classList.add("row")
-        container.appendChild(row)
+        gridContainer.appendChild(row)
     
         for (let j = 1; j <= size; j++) {
             const square = document.createElement("div")
@@ -36,12 +37,12 @@ resetButton.addEventListener("click", () => {
 
 changeButton.addEventListener("click", () => {
     gridSize = prompt("Give a size between 5 and 100.")
-
-    if (gridSize > 100 || gridSize < 5 || gridSize !== typeof "number") {
+    
+    if (gridSize > 100 || gridSize < 5) {
         return alert("Give a number between 5 and 100.")
     }
 
-    container.innerHTML = ""
+    gridContainer.innerHTML = ""
 
     createGrid(gridSize)
 })
