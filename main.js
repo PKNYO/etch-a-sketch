@@ -19,10 +19,22 @@ function createGrid(size) {
             row.appendChild(square)
     
             square.addEventListener("mouseover", (e) => {
-                e.target.classList.add("hover")
+                e.target.style.backgroundColor = getRandomColor()
             })
         }
     }
+}
+
+function getRandomColor() {
+    let arrayHex = ["A", "B", "C", "D", "E", "F", "1", "2", "3", "4", "5", "6"]
+    let randomHexCode = "#"
+
+    for (let i = 0; i < 6; i++) {                            // There's 6 characters ina HEX code
+        const randomIndex = Math.floor(Math.random() * 12)
+        randomHexCode += arrayHex[randomIndex]
+    }
+
+    return randomHexCode
 }
 
 createGrid(gridSize)
