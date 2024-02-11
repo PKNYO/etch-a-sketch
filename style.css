@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    margin: 0;
+    background-color: antiquewhite;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 80vh;
+    background-color: aliceblue;
+}
+
+.square {
+    border: solid 1px black;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+.hover {
+    background-color: gray;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+}
+
+.button-container > button {
+    margin: 20px;
+    
+}
